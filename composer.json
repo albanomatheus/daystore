@@ -1,0 +1,8 @@
+{
+	"autoload" : {
+		"files" : [
+			"_back/functions/custom.php",
+			"_back/db/sql_functions.php"
+		]
+	}
+}

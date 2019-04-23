@@ -1,0 +1,229 @@
+* {
+    font-family: Ubuntu;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding-top: 10px;
+    overflow-y: scroll;
+    color: rgba(0,0,0,0.7);
+}
+
+h1 {
+    font-size: 25pt;
+    color: purple;
+    margin: auto;
+}
+
+h2 {
+    font-family: Arial;
+    font-size: 15pt;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: purple;
+}
+
+header {
+    border-bottom: 2px purple solid;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    height: 130px;
+}
+
+input {
+    display: block;
+    border: 1px solid #BDC3C7;
+    border-radius: 2px;
+    height: 15px;
+    padding: 10px;
+}
+
+select {
+    display: block;
+    border: 1px solid #BDC3C7;
+    border-radius: 2px;
+    color: purple;
+    background-color: white;
+    padding: 5px;  
+}
+
+.title {
+    border-bottom: 2px solid purple;
+    text-align: center;
+    margin: 3px auto 30px auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.main {
+    margin: auto;
+    width: 80%; 
+}
+
+#menu {
+    float: left;
+    margin-right: 10px; 
+}
+
+#menu ul {
+    margin: 0;
+    list-style: none;
+}
+ 
+
+#menu ul li{
+    padding: 15px;
+    margin: 3px 0px 3px 0px;
+    position: relative;
+    width: 200px;
+    vertical-align: middle;
+    background-color: white;
+    border: 1px solid #BDC3C7;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    border-radius: 2px;
+}
+
+#menu ul li:hover {
+    background-color: purple;
+    color: white;
+}
+
+#menu ul li:hover > a{
+    color: white;
+}
+
+ 
+#search {
+    float: right;
+}
+
+#searchText {
+    background-color:transparent;
+    /*font-size:18px;*/
+    border: none;
+    height:32px;
+    border-radius: 2px;
+    width:190px;
+    display: inline;
+    /*margin-bottom: 2px;*/
+}
+
+.searchButton {
+    padding: 10px;
+    border: 1px solid #BDC3C7;
+    border-radius:0 7px 7px 0;
+    font-weight:bold;
+    background-color: white;
+    cursor: pointer;
+    color: purple;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    border-radius: 2px;
+}
+
+.searchButton:hover{
+    background-color: purple;
+    color: white;
+}
+
+.container {
+    float: right;
+    /*border: 2px solid green;*/
+    width: 75%;
+}
+
+.ads {
+    float: left;
+    border: 2px solid #BDC3C7;
+    border-radius: 2px;
+    margin: 2px;
+    text-align: center;
+}
+
+.ads:hover {
+    border-color: purple;
+}
+
+
+
+.cartButton {
+    border: 1px solid #BDC3C7;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    border-radius: 3px;
+    margin: 5px;
+
+}
+
+.bt_form {
+    border: 1px solid #BDC3C7;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 2px;
+    margin-top: 5px;
+    width: 240px;
+    height: 37px;
+
+}
+.bt_form:hover{
+    background-color: #630563;
+    color: white;
+}
+
+.total {
+    color: purple;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #BDC3C7;
+    padding: 10px;
+}
+
+.total_bt {
+    border: 1px solid #BDC3C7;
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 2px;
+    margin-top: 5px;
+    width: 100%;
+    height: 37px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.total_bt:hover {
+    background-color: #630563;
+    color: white;
+}
+
+.user {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #BDC3C7;
+    margin-bottom: 5px;
+}
+
+.user:hover {
+    border: 2px solid purple;
+}
+
+.user label {
+    color: purple;
+}
