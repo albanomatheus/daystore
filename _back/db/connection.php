@@ -1,2 +1,2 @@
 <?php 
-	$conn = connect("localhost", "root", "root", "ebought");
+	$conn = connect("localhost", "matheus", "matheus123", "ebought");
