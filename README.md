@@ -3,7 +3,7 @@
 
 - Configurações iniciais:
 	É preciso ter um ambiente adequado com um servidor que interprete códigos PHP, junto com o MySQL para guardar informações no banco.
-	Após isso, execute os comandos sql presentes em _database/ebought.sql para criar o banco.
+	Após isso, execute os comandos sql presentes em _database/daystore.sql para criar o banco.
 	Configure a conexão com o banco em _back/db/connection.php e dê as permissões necessárias para as pastas.
 	Instale o Composer para carregar as funções presentes no código.
 

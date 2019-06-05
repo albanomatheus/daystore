@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `ebought`
+-- Banco de dados: `daystore`
 --
 
 -- --------------------------------------------------------
@@ -63,8 +63,13 @@ CREATE TABLE `ads` (
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `name` varchar(20) NOT NULL,
+  `cpf` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
   `password` varchar(20) NOT NULL,
-  `cart` text
+  `address` varchar(20) NOT NULL,
+  `phone` varchar(20) NOT NULL,
+  `birth` timestamp NOT NULL,
+  `job` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
