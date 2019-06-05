@@ -41,33 +41,16 @@ if ($_GET['key'] == "logout") {
 }
 
 if ($_GET['key'] == "addToCart") {
-    if (isset($_SESSION['user_id']) and isset($_SESSION['user_key'])) {
-        /*$user = select($conn, "user", "id=" . $_SESSION['user_id']);
-        $cart = $user[0]['cart'] . $_POST['item'] . "\n";
-        $sql = "UPDATE user SET cart='{$cart}' WHERE id={$_SESSION['user_id']}";
-        echo (mysqli_query($conn, $sql)) ? "1" : "0";*/
-
-        if (!$_COOKIE["cart"]) {
-            setcookie("cart", "", time() + (86400 * 30));
-        };
-
-        setcookie("cart", $_COOKIE["cart"] . $_POST['item'] . "\n", time() + (86400 * 30));
-        echo $_COOKIE["cart"];
-
-    } else {
-        echo "-1";
-    }
+    echo setcookie("cart", $_COOKIE["cart"] . $_POST['item'] . "%", time() + (86400 * 30), "/") ? "1" : "0";
 }
 
 if ($_GET['key'] == "rmFromCart") {
-    if (isset($_SESSION['user_id']) and isset($_SESSION['user_key'])) {
-        $user = select($conn, "user", "id=" . $_SESSION['user_id']);
-        $cart = preg_replace("/" . $_POST['item'] . "\n" . "/", '', $user[0]['cart'], 1);
-        $sql = "UPDATE user SET cart='{$cart}' WHERE id={$_SESSION['user_id']}";
-        echo (mysqli_query($conn, $sql)) ? "1" : "0";
-    } else {
-        echo "-1";
-    }
+    /*$user = select($conn, "user", "id=" . $_SESSION['user_id']);
+    $cart = preg_replace("/" . $_POST['item'] . "\n" . "/", '', $user[0]['cart'], 1);
+    $sql = "UPDATE user SET cart='{$cart}' WHERE id={$_SESSION['user_id']}";*/
+
+    $cart = preg_replace("/" . $_POST['item'] . "%" . "/", '', trim($_COOKIE['cart']), 1);
+    echo setcookie("cart", $cart, time() + (86400 * 30), "/") ? "1" : "0";
 }
 
 mysqli_close($conn);

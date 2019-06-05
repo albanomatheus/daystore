@@ -41,10 +41,10 @@
 	// Esta função carrega os adesivos igual a outra, porem com algumas características específicas para montar o carrinho do usuário
 	// Ela retorna um array com o preço total do carrinho e uma string com comando html que será rederizada em cart.php
 	function loadCart($conn, $id) {
-		if ($user = select($conn, "user", "id={$id}")) {
+		if ($_COOKIE["cart"]) {
 			$arr['price'] = 0;
 			$arr['cart'] = '';
-			$imgs = explode("\n", $user[0]['cart']);
+			$imgs = explode("%", $_COOKIE["cart"]);
 			$cont = array_count_values($imgs);
 			$imgs = array_unique($imgs);
 			foreach ($imgs as $key => $value) {
