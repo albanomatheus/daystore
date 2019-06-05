@@ -66,4 +66,4 @@ function select($conn, $table, $condition) {
     return $arr;
 }
 
-$conn = connect("localhost", "matheus", "matheus123", "daystore");
+$conn = connect("localhost", "root", "root", "daystore");
