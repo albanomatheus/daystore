@@ -7,7 +7,17 @@ require "../functions/custom.php";
 session_start();
 
 if ($_GET['key'] == "sign") {
-    if (insert($conn, "user", '[{"name":"' . $_POST['name'] . '", "password":"' . $_POST['pass'] . '"}]')) {
+    if (insert($conn, "user",
+        '[{
+                "name":"' . $_POST['name'] . '",
+                "password":"' . $_POST['pass'] . '",
+                "cpf":"' . $_POST['cpf'] . '",
+                "email":"' . $_POST['email'] . '",
+                "address":"' . $_POST['address'] . '",
+                "phone":"' . $_POST['phone'] . '",
+                "birth":"' . $_POST['birth'] . '",
+                "job":"' . $_POST['job'] . '"
+               }]')) {
         header("location:/daystore/?page=sign&men=success");
     } else {
         header("location:/daystore/?page=sign&men=fail");
@@ -32,10 +42,18 @@ if ($_GET['key'] == "logout") {
 
 if ($_GET['key'] == "addToCart") {
     if (isset($_SESSION['user_id']) and isset($_SESSION['user_key'])) {
-        $user = select($conn, "user", "id=".$_SESSION['user_id']);
-        $cart = $user[0]['cart'].$_POST['item']."\n";
+        /*$user = select($conn, "user", "id=" . $_SESSION['user_id']);
+        $cart = $user[0]['cart'] . $_POST['item'] . "\n";
         $sql = "UPDATE user SET cart='{$cart}' WHERE id={$_SESSION['user_id']}";
-        echo (mysqli_query($conn, $sql)) ? "1" : "0";
+        echo (mysqli_query($conn, $sql)) ? "1" : "0";*/
+
+        if (!$_COOKIE["cart"]) {
+            setcookie("cart", "", time() + (86400 * 30));
+        };
+
+        setcookie("cart", $_COOKIE["cart"] . $_POST['item'] . "\n", time() + (86400 * 30));
+        echo $_COOKIE["cart"];
+
     } else {
         echo "-1";
     }

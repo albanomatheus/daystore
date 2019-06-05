@@ -20,7 +20,8 @@ function addToCart(button,item, price) {
 		type: "POST",
 		data: {item:item, price:price},
 		success: function (data) {
-			if (data == "1") {
+			console.log(data);
+			if (data === "1") {
 				$(button).css("background-color","green");
 				$(button).html("Adicionado");
 				setTimeout(function(){
@@ -28,7 +29,7 @@ function addToCart(button,item, price) {
 					$(button).html("+Carrinho");
 
 				},1000);
-			} else if(data == "-1"){
+			} else if(data === "-1"){
 				$(button).css("background-color","red");
 				$(button).html("Faça o Login");
 				setTimeout(function(){
