@@ -52,6 +52,7 @@ if (isset($_SESSION['user']) && isset($_GET['num'])) {
     </table>
 </header>
 <div id="menu">
+    <ul>
         <a href="<?php echo "?page=home&num={$key}"; ?>">
             <li>Todos</li>
         </a>
