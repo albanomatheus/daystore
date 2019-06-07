@@ -52,23 +52,6 @@ if (isset($_SESSION['user']) && isset($_GET['num'])) {
     </table>
 </header>
 <div id="menu">
-
-    <nav class="col-sm-3 ">
-        <div class="col-sm-12" id="fixed-sidebar">
-            <!-- <a href="index.html"><img id="home-logo" src="../media/logo-prueba.jpg" alt="Logo de Animanoir"></a>  -->
-            <ul>
-                <li class="fuente-fjalla ul-personalizada">Animación</li>
-                <li class="fuente-fjalla ul-personalizada">Ilustración</li>
-                <li class="fuente-fjalla ul-personalizada">Interacción</li>
-                <br>
-                <li class="fuente-fjalla ul-personalizada">Blog</li>
-                <br>
-                <li class="fuente-fjalla ul-personalizada"><a href="acerca.html">Acerca</a></li>
-                <li class="fuente-fjalla ul-personalizada">Contacto</li>
-            </ul>
-        </div>
-    </nav>
-    <ul>
         <a href="<?php echo "?page=home&num={$key}"; ?>">
             <li>Todos</li>
         </a>
