@@ -7,6 +7,9 @@ include "_back/db/connection.php";
 <html>
 <head>
     <title>DAYSTORE</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/lib/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/js/scripts.js"></script>

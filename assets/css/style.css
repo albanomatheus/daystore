@@ -6,7 +6,7 @@
 }
 
 body {
-    padding-top: 10px;
+    padding-top: 5px;
     overflow-y: scroll;
     color: rgba(0,0,0,0.7);
 }
@@ -32,7 +32,6 @@ header {
     border-bottom: 2px purple solid;
     margin-bottom: 15px;
     width: 100%;
-    padding: 10px;
     height: 130px;
 }
 
@@ -50,7 +49,7 @@ select {
     border-radius: 2px;
     color: purple;
     background-color: white;
-    padding: 5px;  
+    padding: 5px;
 }
 
 .title {
@@ -63,19 +62,19 @@ select {
 
 .main {
     margin: auto;
-    width: 80%; 
+    width: 95%;
 }
 
 #menu {
     float: left;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 #menu ul {
     margin: 0;
     list-style: none;
 }
- 
+
 
 #menu ul li{
     padding: 15px;
@@ -101,7 +100,7 @@ select {
     color: white;
 }
 
- 
+
 #search {
     float: right;
 }
@@ -137,9 +136,8 @@ select {
 }
 
 .container {
-    float: right;
-    /*border: 2px solid green;*/
-    width: 75%;
+    float: left;
+    width: 85%;
 }
 
 .ads {
@@ -207,6 +205,11 @@ select {
     font-size: 20px;
     margin-bottom: 10px;
 }
+#fixed-sidebar {
+    position: fixed;
+    max-width: 20%;
+    color: white;
+}
 
 .total_bt:hover {
     background-color: #630563;
@@ -226,4 +229,13 @@ select {
 
 .user label {
     color: purple;
+}
+
+#rodape {
+    width: 95%;
+    position: fixed;
+    color: #630563;
+    bottom:0;
+    height: 100px;
+    border-top: 2px solid purple;
 }
