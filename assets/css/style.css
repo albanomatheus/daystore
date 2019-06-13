@@ -67,7 +67,6 @@ select {
 
 #menu {
     float: left;
-    margin-right: 10px;
 }
 
 #menu ul {
@@ -137,7 +136,7 @@ select {
 
 .container {
     float: left;
-    width: 85%;
+    width: 80%;
 }
 
 .ads {
