@@ -39,7 +39,7 @@
 
         <div class="form-group col-md-4">
             <label>Nascimento:</label>
-            <input type="text" class="form-control" id="birth"  name="birth">
+            <input type="date" class="form-control" id="birth"  name="birth">
         </div>
 
         <div class="form-group col-md-4"">
