@@ -64,15 +64,41 @@ CREATE TABLE `ads` (
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
-  `name` varchar(20) NOT NULL,
-  `cpf` varchar(20) NOT NULL,
-  `email` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  `address` varchar(20) NOT NULL,
-  `phone` varchar(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `cpf` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `phone` varchar(50) NOT NULL,
   `birth` timestamp NOT NULL,
-  `job` varchar(20) NOT NULL
+  `job` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `address`
+--
+
+CREATE TABLE `address` (
+  `id` int(11) NOT NULL,
+  `postal_code` varchar(10) NOT NULL,
+  `city` varchar(20) NOT NULL,
+  `street` varchar(20) NOT NULL,
+  `block` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+INSERT INTO `address` (`id`, `postal_code`, `city`, `street`, `block`) VALUES
+(1, '38408-720', 'Uberlandia', 'Vasco Mascia', 'Santa Luzia');
+
+INSERT INTO `address` (`id`, `postal_code`, `city`, `street`, `block`) VALUES
+(2, '38500-000', 'Uberlandia', 'João da Silva', 'Brazil');
+
+INSERT INTO `address` (`id`, `postal_code`, `city`, `street`, `block`) VALUES
+(3, '38500-111', 'Uberlandia', 'Maria Joaquina', 'Centro');
+
+INSERT INTO `address` (`id`, `postal_code`, `city`, `street`, `block`) VALUES
+(4, '38500-222', 'Uberlandia', 'Rua dos Carros', 'Custódio Pereira');
 
 --
 -- Índices de tabelas apagadas
@@ -83,8 +109,7 @@ CREATE TABLE `user` (
 --
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`),
-  ADD UNIQUE KEY `username_2` (`username`);
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- Índices de tabela `ads`
@@ -99,6 +124,12 @@ ALTER TABLE `ads`
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `name` (`name`);
+
+--
+-- Índices de tabela `address`
+--
+ALTER TABLE `address`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de tabelas apagadas
@@ -118,6 +149,9 @@ ALTER TABLE `ads`
 -- AUTO_INCREMENT de tabela `user`
 --
 ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+ALTER TABLE `address`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

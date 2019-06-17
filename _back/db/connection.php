@@ -58,7 +58,7 @@ function select($conn, $table, $condition) {
     $arr = array();
 
     if ($res) {
-        while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+        while ($row = mysqli_fetch_assoc($res)) {
             array_push($arr, $row);
         }
     }

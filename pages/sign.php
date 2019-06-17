@@ -26,10 +26,34 @@
         </div>
 
         <div class="form-group col-md-6">
-            <label>Endereço:</label>
-            <input type="text" class="form-control" id="adress"  name="adress">
+            <label>CEP:</label><br>
+            <input type="text" class="form-control" style="display: inline; width: 80%" id="endereco"  name="adress">
+            <button type="button" class="btn btn-primary" onclick="getAddress(document.getElementById('endereco').value)">Procurar</button>
         </div>
     </div>
+
+    <div class="row">
+        <div class="form-group col-md-2">
+            <label>Cidade:</label>
+            <input type="text" class="form-control" id="cidade" name="city">
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Rua:</label>
+            <input type="text" class="form-control" id="rua" name="street">
+        </div>
+
+        <div class="form-group col-md-3">
+            <label>Bairro:</label>
+            <input type="text" class="form-control" id="bairro"  name="block">
+        </div>
+
+        <div class="form-group col-md-1">
+            <label>Numero:</label>
+            <input type="number" class="form-control" id="numero"  name="number">
+        </div>
+    </div>
+
 
     <div class="row">
         <div class="form-group col-md-4">

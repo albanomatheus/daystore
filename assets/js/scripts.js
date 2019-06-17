@@ -81,3 +81,17 @@ function del(table, id, name) {
 		}
 	});
 }
+
+function getAddress(address) {
+	$.ajax({
+		url: "_back/validation/user.php?key=address",
+		type: "GET",
+		data: {postalCode: address},
+		success: function (data) {
+			data = JSON.parse(data);
+			document.getElementById('cidade').value = data.city;
+			document.getElementById('bairro').value = data.block;
+			document.getElementById('rua').value = data.street;
+		}
+	});
+}

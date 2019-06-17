@@ -13,7 +13,7 @@ if ($_GET['key'] == "sign") {
                 "password":"' . $_POST['pass'] . '",
                 "cpf":"' . $_POST['cpf'] . '",
                 "email":"' . $_POST['email'] . '",
-                "address":"' . $_POST['address'] . '",
+                "address":"' . $_POST['street'] . ", " . $_POST['number'] . " - " . $_POST['city'] .'",
                 "phone":"' . $_POST['phone'] . '",
                 "birth":"' . $_POST['birth'] . '",
                 "job":"' . $_POST['job'] . '"
@@ -45,12 +45,13 @@ if ($_GET['key'] == "addToCart") {
 }
 
 if ($_GET['key'] == "rmFromCart") {
-    /*$user = select($conn, "user", "id=" . $_SESSION['user_id']);
-    $cart = preg_replace("/" . $_POST['item'] . "\n" . "/", '', $user[0]['cart'], 1);
-    $sql = "UPDATE user SET cart='{$cart}' WHERE id={$_SESSION['user_id']}";*/
-
     $cart = preg_replace("/" . $_POST['item'] . "%" . "/", '', trim($_COOKIE['cart']), 1);
     echo setcookie("cart", $cart, time() + (86400 * 30), "/") ? "1" : "0";
+}
+if ($_GET['key'] == "address") {
+    $result = select($conn, 'address', "postal_code = '" . $_GET['postalCode'] . "'");
+
+    echo json_encode($result[0]);
 }
 
 mysqli_close($conn);
